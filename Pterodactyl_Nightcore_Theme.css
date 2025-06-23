@@ -2,7 +2,7 @@
 /* Main theme: Purple #7C3AED, Cyan #00E1F0, dark bg, text accent */
 /* --- BACKGROUND --- */
 html {
-  background-image: url("https://raw.githubusercontent.com/Wadfiq912/Pterodactyl_Nightcore_Theme/main/background.jpg");
+  background-image: url("https://raw.githubusercontent.com/Wadfiq912/Pterodactyl_Nightcore_Theme/main/background.png");
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: center center;
@@ -66,7 +66,7 @@ div.grid-cols-10
   box-shadow: 0 4px 24px #7C3AED16 !important;
 }
 div.w-full.bg-neutral-900.shadow-md.overflow-x-auto {
-  background-image: url("https://raw.githubusercontent.com/Wadfiq912/Pterodactyl_Nightcore_Theme/main/background.jpg");
+  background-image: url("https://raw.githubusercontent.com/Wadfiq912/Pterodactyl_Nightcore_Theme/main/background.png");
 }
 
 /* --- PANEL BORDER/EFFECTS --- */
