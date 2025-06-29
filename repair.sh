@@ -10,7 +10,7 @@ repairPanel(){
 
     rm -r /var/www/pterodactyl/resources
 
-    curl -L https://github.com/pterodactyl/panel/releases/download/v1.11.11/panel.tar.gz | tar -xzv
+    curl -L https://github.com/pterodactyl/panel/releases/download/v1.9.2/panel.tar.gz | tar -xzv
 
     chmod -R 755 storage/* bootstrap/cache
 
