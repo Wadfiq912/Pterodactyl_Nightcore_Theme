@@ -1,167 +1,138 @@
-/* NoneCloud Custom Panel Theme - Recolored for Brand Identity */
-/* Main theme: Purple #7C3AED, Cyan #00E1F0, dark bg, text accent */
-/* --- BACKGROUND --- */
-html {
-  background-image: url("https://raw.githubusercontent.com/Wadfiq912/Pterodactyl_Nightcore_Theme/main/background.png");
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  background-color: #0d1117;
+/* NoneCloud Status.html Theme for Pterodactyl Panel */
+/* 1. BG Animated Bulat */
+html, body {
+  background: #0d1117 !important;
+  background-image: none !important;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+  font-family: 'Outfit', 'Inter', 'Segoe UI', Arial, sans-serif;
 }
 
-/* --- SCROLLBAR --- */
-::-webkit-scrollbar {width: 10px !important;}
-::-webkit-scrollbar-track{background: #1a1f29 !important;}
+/* Animated Background Circles */
+.animated-bg {
+  position: fixed;
+  z-index: 0;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+.animated-bg .circle {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.13;
+  animation: moveBg 18s linear infinite;
+}
+.animated-bg .circle1 { width: 320px; height: 320px; left: -80px; top: 60px; background: #7C3AED; animation-delay: 0s;}
+.animated-bg .circle2 { width: 230px; height: 230px; right: -60px; top: 280px; background: #00E1F0; animation-delay: 4s;}
+.animated-bg .circle3 { width: 160px; height: 160px; left: 40vw; bottom: -50px; background: #fff; opacity:0.07; animation-delay: 2s;}
+.animated-bg .circle4 { width: 120px; height: 120px; right: 12vw; bottom: 70px; background: #ff4a6b; opacity: 0.09; animation-delay: 3s;}
+.animated-bg .circle5 { width: 110px; height: 110px; left: 10vw; bottom: 120px; background: #13e16c; opacity: 0.09; animation-delay: 7s;}
+@keyframes moveBg {
+  0% { filter: blur(0px) brightness(1);}
+  50% { filter: blur(8px) brightness(1.2);}
+  100% { filter: blur(0px) brightness(1);}
+}
+
+/* 2. SCROLLBAR */
+::-webkit-scrollbar { width: 10px !important; }
+::-webkit-scrollbar-track{ background: #1a1f29 !important; }
 ::-webkit-scrollbar-thumb{
   background: linear-gradient(135deg,#7C3AED 60%,#00E1F0 100%) !important;
   border-radius: 10px !important;
 }
 
-/* --- SERVER ROWS & PANEL BG --- */
-a.GreyRowBox-sc-1xo9c6v-0.ServerRow__StatusIndicatorBox-sc-1ibsw91-2.dyLna-D.fRwFrz.DashboardContainer___StyledServerRow-sc-1topkxf-2,
-a.GreyRowBox-sc-1xo9c6v-0.ServerRow__StatusIndicatorBox-sc-1ibsw91-2.dyLna-D.fwbDSe.DashboardContainer___StyledServerRow-sc-1topkxf-2.jbVWLN,
-div.GreyRowBox-sc-1xo9c6v-0,
-div.SubNavigation-sc-lfuaoi-0.jZPsWO.fade-appear-done.fade-enter-done,
-div.style-module_1n_DiqmT,
-div.LoginFormContainer___StyledDiv-sc-cyh04c-3,
-div.ScheduleEditContainer___StyledDiv3-sc-1fhsmlc-7,
-div.ScheduleEditContainer___StyledDiv-sc-1fhsmlc-0,
-div.grid.grid-cols-6.gap-2.md:gap-4.col-span-4.lg:col-span-1.order-last.lg:order-none,
-div.style-module_2Vp6MaXq.bg-gray-600.cursor-pointer,
-div.style-module_2Vp6MaXq.bg-gray-600,
-div.style-module_2XbmHEcn.group,
-div.icon.mr-4,
-a.style-module_35MPv1CD.style-module_35MPv1CD.active,
-div.TitledGreyBox___StyledDiv3-sc-gvsoy-4.fKIIIQ,
-div.TitledGreyBox___StyledDiv2-sc-gvsoy-1.jRrWLs,
-div.ContentBox___StyledDiv-sc-mjlt6f-2.iGOcRf,
-div.EditScheduleModal___StyledDiv2-sc-wh9db9-4.fhEpAC,
-div.EditScheduleModal___StyledDiv4-sc-wh9db9-6.jyDDEO,
-div.EditScheduleModal___StyledDiv5-sc-wh9db9-7.ueIjC,
-a.GreyRowBox-sc-1xo9c6v-0.ScheduleContainer___StyledGreyRowBox-sc-dlqnx9-2.dyLna-D.bppajE,
-div.GreyRowBox-sc-1xo9c6v-0.UserRow___StyledGreyRowBox-sc-hg2wjz-0.dyLna-D.dmlaEn,
-div.CreateBackupButton___StyledDiv2-sc-da8bqw-3.eDncUf,
-div.flex.justify-end.space-x-4.mt-4.w-full.md:mt-0.md:w-48,
-div.TitledGreyBox___StyledDiv-sc-gvsoy-0.oLbNP.StartupContainer___StyledTitledGreyBox-sc-163imy2-1.kRunTE,
-div.TitledGreyBox___StyledDiv-sc-gvsoy-0.oLbNP,
-div.grid.grid-cols-10.py-4.border-b-2.border-gray-800.last:rounded-b.last:border-0.group,
-.group,
-.GreyRowBox-sc-1xo9c6v-0,
-div.TaskDetailsModal___StyledDiv5-sc-1b5dnyw-7.kNHdmD,
-div.App___StyledDiv-sc-2l91w7-0.fnfeQw,
-div.CodeMirror,
-div.CodeMirror-gutters,
-div.CodeMirror-overlayscroll-vertical,
-div.relative.style-module_1AMtO9lt,
-div.Module_2XbmHEcn.group,
-div.w-full.bg-neutral-900.shadow-md.overflow-x-auto,
-div.bg-gray-700,
-div.grid-cols-10
-{
-  background-color: rgba(30,41,59,0.85) !important;
-  border-radius: 10px !important;
+/* 3. PANEL, CARD, ROW, MODAL - Glassmorphism & Shadow Premium */
+div, section, .box, .card, .modal, .panel, .content, .GreyRowBox-sc-1xo9c6v-0, a.GreyRowBox-sc-1xo9c6v-0,
+div[class*="Container"], div[class*="Box"], div[class*="Modal"], div[class*="Panel"], div[class*="Content"] {
+  background: rgba(30,41,59,0.87) !important;
+  border-radius: 14px !important;
   color: #b6c2ff !important;
-  border: none;
-  box-shadow: 0 4px 24px #7C3AED16 !important;
-}
-div.w-full.bg-neutral-900.shadow-md.overflow-x-auto {
-  background-image: url("https://raw.githubusercontent.com/Wadfiq912/Pterodactyl_Nightcore_Theme/main/background.png");
+  border: none !important;
+  box-shadow: 0 4px 32px #7C3AED18, 0 0px 0px #00E1F000 !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
-/* --- PANEL BORDER/EFFECTS --- */
-div.SettingsContainer___StyledDiv6-sc-1e5ycmz-7.bzLcIU {
+/* 4. BORDER/EFFECTS HIGHLIGHT */
+div[class*="SettingsContainer"], div[class*="Sidebar"], div[class*="Nav"], div[class*="Header"] {
   border-left: 4px solid #7C3AED !important;
 }
 
-div.ScheduleEditContainer___StyledDiv3-sc-1fhsmlc-7.bNXcqn {
-  border-bottom: 4px solid #7C3AED !important;
-}
-
-/* --- BUTTONS --- */
-button.Button__ButtonStyle-sc-1qu1gou-0,
-button.style-module_4LBM1DKx.style-module_3kBDV_wo,
-button.style-module_4LBM1DKx.style-module_3kBDV_wo.style-module_2UCZLAAp,
-button.style-module_4LBM1DKx.style-module_3kBDV_wo.style-module_Yp7-2Fw-.flex-1,
-button.Button__ButtonStyle-sc-1qu1gou-0.dLAOsI
-{
+/* 5. BUTTONS */
+button, .btn, input[type="button"], input[type="submit"], .Button__ButtonStyle-sc-1qu1gou-0 {
   background: linear-gradient(90deg,#7C3AED 45%,#00E1F0 100%) !important;
   border: 2px solid #00E1F0 !important;
   color: #fff !important;
   border-radius: 10px !important;
   font-weight: 700;
-  box-shadow: 0 2px 12px #00E1F055;
+  box-shadow: 0 2px 18px #00E1F088;
   transition: background .19s, box-shadow .19s, color .17s;
+  filter: drop-shadow(0 2px 12px #7C3AED33);
 }
-button.Button__ButtonStyle-sc-1qu1gou-0:hover,
-button.style-module_4LBM1DKx.style-module_3kBDV_wo:hover,
-button.style-module_4LBM1DKx.style-module_3kBDV_wo.style-module_2UCZLAAp:hover,
-button.style-module_4LBM1DKx.style-module_3kBDV_wo.style-module_Yp7-2Fw-.flex-1:hover {
+button:hover, .btn:hover, input[type="button"]:hover, input[type="submit"]:hover {
   background: linear-gradient(90deg,#00E1F0 20%,#7C3AED 80%) !important;
   color: #FFD700 !important;
   box-shadow: 0 2px 18px #00E1F099;
 }
 
-/* --- LABELS & TEXT --- */
-label.Label-sc-g780ms-0,
-label.Label-sc-g780ms-0.eDArzA {
-  color: #8B9DFF !important;
-  font-weight: 600;
-}
-
-/* --- AVATAR/ICON/IMAGE --- */
-img.LoginFormContainer___StyledImg-sc-cyh04c-5 {
-  content:url('https://i.imgur.com/96D5X4d.png') !important;
-  padding-left: 20px !important; 
-  padding-right: 20px !important; 
-  padding-top: 0px !important; 
-  padding-bottom: 0px !important;
-}
-div.CodeMirror-overlayscroll-vertical {
-  background: transparent !important;
-}
-
-/* --- INPUTS & TEXTAREA --- */
-input.peer.style-module_3TDo--Tn,
-input.Input-sc-19rce1w-0.jqTCDz,
-input.Input-sc-19rce1w-0.floJYL,
-input.Input-sc-19rce1w-0.fFYzlR,
-textarea.Input__Textarea-sc-19rce1w-1.kKFWRA,
-select.Select-sc-17exaqp-0.dupyoa,
-option,
-div.style-module_1RnhIT0w
-{
+/* 6. INPUTS, TEXTAREA, SELECT */
+input, textarea, select {
   background: rgba(124, 58, 237,0.13) !important;
   border: 2px solid #7C3AED !important;
   color: #b6c2ff !important;
   border-radius: 8px !important;
   font-weight: 600;
   transition: border .18s, box-shadow .18s;
+  box-shadow: 0 2px 12px #7C3AED13;
 }
-input.peer.style-module_3TDo--Tn:focus,
-input.Input-sc-19rce1w-0.jqTCDz:focus,
-input.Input-sc-19rce1w-0.floJYL:focus,
-input.Input-sc-19rce1w-0.fFYzlR:focus,
-textarea.Input__Textarea-sc-19rce1w-1.kKFWRA:focus,
-select.Select-sc-17exaqp-0.dupyoa:focus {
+input:focus, textarea:focus, select:focus {
   border: 2px solid #00E1F0 !important;
   box-shadow: 0 2px 12px #00E1F099;
   outline: none;
 }
 
-/* --- MODAL --- */
-div.Modal___StyledDiv2-sc-9vzni8-3.ekHIsr {
+/* 7. LABELS & TEXT */
+label, .Label-sc-g780ms-0 {
+  color: #8B9DFF !important;
+  font-weight: 600;
+}
+
+/* 8. MODAL */
+.modal, div[class*="Modal"] {
   background: rgba(30,41,59,0.98) !important;
-  border-radius: 16px !important;
+  border-radius: 20px !important;
   box-shadow: 0 8px 40px #7C3AED33;
+  backdrop-filter: blur(12px);
 }
 
-/* --- HELP/ERROR TEXT --- */
-p.input-help {
-  color: #FFD700 !important;
+/* 9. AVATAR/ICON */
+img.LoginFormContainer___StyledImg-sc-cyh04c-5 {
+  content:url('https://i.imgur.com/96D5X4d.png') !important;
+  padding: 10px 20px !important;
+  border-radius: 12px !important;
 }
 
-/* --- SPECIAL EFFECTS --- */
+/* 10. CODE AREA */
+div.CodeMirror, div.CodeMirror-gutters, div.CodeMirror-overlayscroll-vertical {
+  background: rgba(30,41,59,0.92) !important;
+  color: #b6c2ff !important;
+  border-radius: 10px !important;
+  box-shadow: 0 2px 12px #7C3AED13 !important;
+}
+
+/* 11. FOCUS OUTLINE */
+*:focus-visible {
+  outline: 2px solid #00E1F0 !important;
+  outline-offset: 2px !important;
+}
+
+/* 12. PERMISSION ROW HOVER */
+label.PermissionRow__Container-sc-1h899cn-0.icxFlO:hover {
+  background: linear-gradient(90deg,#7C3AED22 0%,#00E1F022 100%) !important;
+}
+
+/* 13. Terminal Scrollbar */
 div.xterm-viewport {
   border-radius: 2px !important;
   background-color: rgba(30,41,59,0.78) !important;
@@ -174,32 +145,4 @@ div.xterm-viewport::-webkit-scrollbar-thumb {
 }
 div.xterm-viewport::-webkit-scrollbar-track {
   background-color: #1a1f29;
-}
-
-/* --- PERMISSION ROW HOVER --- */
-label.PermissionRow__Container-sc-1h899cn-0.icxFlO:hover {
-  background: linear-gradient(90deg,#7C3AED22 0%,#00E1F022 100%) !important;
-}
-
-/* --- MISC/UTILITY --- */
-.style-module_1WqkLT9X,
-.style-module_1WqkLT9X:hover,
-.style-module_35MPv1CD.active,
-.style-module_35MPv1CD.active:hover,
-div.GreyRowBox-sc-1xo9c6v-0.iTERJN.flex-wrap.md:flex-nowrap.mt-2
-{
-  background: #181c23 !important;
-}
-
-/* --- SNIPPET CLEANUP/UNUSED/DEFAULTS --- */
-div.style-module_3TDo--Tn,
-div.module_2XbmHEcn.group,
-div.style-module_2Vp6MaXq.bg-gray-600 {
-  border-radius: 10px !important;
-}
-
-/* --- FOCUS OUTLINE --- */
-*:focus-visible {
-  outline: 2px solid #00E1F0;
-  outline-offset: 2px;
 }
