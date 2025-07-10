@@ -1,148 +1,152 @@
-/* NoneCloud Status.html Theme for Pterodactyl Panel */
+/* * NoneCloud Theme for Pterodactyl Panel / Status Page
+ * Last Updated: July 10, 2025
+ * Colors aligned with nonecloud.top main website.
+*/
+
 /* 1. BG Animated Bulat */
 html, body {
-  background: #0d1117 !important;
-  background-image: none !important;
-  min-height: 100vh;
-  position: relative;
-  overflow-x: hidden;
-  font-family: 'Outfit', 'Inter', 'Segoe UI', Arial, sans-serif;
+  background: #0d1117 !important;
+  background-image: none !important;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+  font-family: 'Outfit', 'Inter', 'Segoe UI', Arial, sans-serif;
 }
 
 /* Animated Background Circles */
 .animated-bg {
-  position: fixed;
-  z-index: 0;
-  inset: 0;
-  pointer-events: none;
-  overflow: hidden;
+  position: fixed;
+  z-index: 0;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
 }
 .animated-bg .circle {
-  position: absolute;
-  border-radius: 50%;
-  opacity: 0.13;
-  animation: moveBg 18s linear infinite;
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.13;
+  animation: moveBg 18s linear infinite;
 }
-.animated-bg .circle1 { width: 320px; height: 320px; left: -80px; top: 60px; background: #7C3AED; animation-delay: 0s;}
-.animated-bg .circle2 { width: 230px; height: 230px; right: -60px; top: 280px; background: #00E1F0; animation-delay: 4s;}
+.animated-bg .circle1 { width: 320px; height: 320px; left: -80px; top: 60px; background: #8A2BE2; animation-delay: 0s;}
+.animated-bg .circle2 { width: 230px; height: 230px; right: -60px; top: 280px; background: #00D1FF; animation-delay: 4s;}
 .animated-bg .circle3 { width: 160px; height: 160px; left: 40vw; bottom: -50px; background: #fff; opacity:0.07; animation-delay: 2s;}
-.animated-bg .circle4 { width: 120px; height: 120px; right: 12vw; bottom: 70px; background: #ff4a6b; opacity: 0.09; animation-delay: 3s;}
-.animated-bg .circle5 { width: 110px; height: 110px; left: 10vw; bottom: 120px; background: #13e16c; opacity: 0.09; animation-delay: 7s;}
+.animated-bg .circle4 { width: 120px; height: 120px; right: 12vw; bottom: 70px; background: #a955ff; opacity: 0.09; animation-delay: 3s;} /* Lighter Purple */
+.animated-bg .circle5 { width: 110px; height: 110px; left: 10vw; bottom: 120px; background: #58d1ff; opacity: 0.09; animation-delay: 7s;} /* Lighter Cyan */
 @keyframes moveBg {
-  0% { filter: blur(0px) brightness(1);}
-  50% { filter: blur(8px) brightness(1.2);}
-  100% { filter: blur(0px) brightness(1);}
+  0% { filter: blur(0px) brightness(1);}
+  50% { filter: blur(8px) brightness(1.2);}
+  100% { filter: blur(0px) brightness(1);}
 }
 
 /* 2. SCROLLBAR */
 ::-webkit-scrollbar { width: 10px !important; }
 ::-webkit-scrollbar-track{ background: #1a1f29 !important; }
 ::-webkit-scrollbar-thumb{
-  background: linear-gradient(135deg,#7C3AED 60%,#00E1F0 100%) !important;
-  border-radius: 10px !important;
+  background: linear-gradient(135deg,#8A2BE2 60%,#00D1FF 100%) !important;
+  border-radius: 10px !important;
 }
 
 /* 3. PANEL, CARD, ROW, MODAL - Glassmorphism & Shadow Premium */
 div, section, .box, .card, .modal, .panel, .content, .GreyRowBox-sc-1xo9c6v-0, a.GreyRowBox-sc-1xo9c6v-0,
 div[class*="Container"], div[class*="Box"], div[class*="Modal"], div[class*="Panel"], div[class*="Content"] {
-  background: rgba(30,41,59,0.87) !important;
-  border-radius: 14px !important;
-  color: #b6c2ff !important;
-  border: none !important;
-  box-shadow: 0 4px 32px #7C3AED18, 0 0px 0px #00E1F000 !important;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  background: rgba(30,41,59,0.87) !important;
+  border-radius: 14px !important;
+  color: #b6c2ff !important;
+  border: none !important;
+  box-shadow: 0 4px 32px #8A2BE218, 0 0px 0px #00D1FF00 !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
 /* 4. BORDER/EFFECTS HIGHLIGHT */
 div[class*="SettingsContainer"], div[class*="Sidebar"], div[class*="Nav"], div[class*="Header"] {
-  border-left: 4px solid #7C3AED !important;
+  border-left: 4px solid #8A2BE2 !important;
 }
 
 /* 5. BUTTONS */
 button, .btn, input[type="button"], input[type="submit"], .Button__ButtonStyle-sc-1qu1gou-0 {
-  background: linear-gradient(90deg,#7C3AED 45%,#00E1F0 100%) !important;
-  border: 2px solid #00E1F0 !important;
-  color: #fff !important;
-  border-radius: 10px !important;
-  font-weight: 700;
-  box-shadow: 0 2px 18px #00E1F088;
-  transition: background .19s, box-shadow .19s, color .17s;
-  filter: drop-shadow(0 2px 12px #7C3AED33);
+  background: linear-gradient(90deg,#8A2BE2 45%,#00D1FF 100%) !important;
+  border: 2px solid #00D1FF !important;
+  color: #fff !important;
+  border-radius: 10px !important;
+  font-weight: 700;
+  box-shadow: 0 2px 18px #00D1FF88;
+  transition: background .19s, box-shadow .19s, color .17s;
+  filter: drop-shadow(0 2px 12px #8A2BE233);
 }
 button:hover, .btn:hover, input[type="button"]:hover, input[type="submit"]:hover {
-  background: linear-gradient(90deg,#00E1F0 20%,#7C3AED 80%) !important;
-  color: #FFD700 !important;
-  box-shadow: 0 2px 18px #00E1F099;
+  background: linear-gradient(90deg,#00D1FF 20%,#8A2BE2 80%) !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 2px 18px #00D1FF99;
 }
 
 /* 6. INPUTS, TEXTAREA, SELECT */
 input, textarea, select {
-  background: rgba(124, 58, 237,0.13) !important;
-  border: 2px solid #7C3AED !important;
-  color: #b6c2ff !important;
-  border-radius: 8px !important;
-  font-weight: 600;
-  transition: border .18s, box-shadow .18s;
-  box-shadow: 0 2px 12px #7C3AED13;
+  background: rgba(138, 43, 226, 0.13) !important;
+  border: 2px solid #8A2BE2 !important;
+  color: #b6c2ff !important;
+  border-radius: 8px !important;
+  font-weight: 600;
+  transition: border .18s, box-shadow .18s;
+  box-shadow: 0 2px 12px #8A2BE213;
 }
 input:focus, textarea:focus, select:focus {
-  border: 2px solid #00E1F0 !important;
-  box-shadow: 0 2px 12px #00E1F099;
-  outline: none;
+  border: 2px solid #00D1FF !important;
+  box-shadow: 0 2px 12px #00D1FF99;
+  outline: none;
 }
 
 /* 7. LABELS & TEXT */
 label, .Label-sc-g780ms-0 {
-  color: #8B9DFF !important;
-  font-weight: 600;
+  color: #8B9DFF !important;
+  font-weight: 600;
 }
 
 /* 8. MODAL */
 .modal, div[class*="Modal"] {
-  background: rgba(30,41,59,0.98) !important;
-  border-radius: 20px !important;
-  box-shadow: 0 8px 40px #7C3AED33;
-  backdrop-filter: blur(12px);
+  background: rgba(30,41,59,0.98) !important;
+  border-radius: 20px !important;
+  box-shadow: 0 8px 40px #8A2BE233;
+  backdrop-filter: blur(12px);
 }
 
 /* 9. AVATAR/ICON */
 img.LoginFormContainer___StyledImg-sc-cyh04c-5 {
-  content:url('https://i.imgur.com/96D5X4d.png') !important;
-  padding: 10px 20px !important;
-  border-radius: 12px !important;
+  content:url('https://i.imgur.com/96D5X4d.png') !important;
+  padding: 10px 20px !important;
+  border-radius: 12px !important;
 }
 
 /* 10. CODE AREA */
 div.CodeMirror, div.CodeMirror-gutters, div.CodeMirror-overlayscroll-vertical {
-  background: rgba(30,41,59,0.92) !important;
-  color: #b6c2ff !important;
-  border-radius: 10px !important;
-  box-shadow: 0 2px 12px #7C3AED13 !important;
+  background: rgba(30,41,59,0.92) !important;
+  color: #b6c2ff !important;
+  border-radius: 10px !important;
+  box-shadow: 0 2px 12px #8A2BE213 !important;
 }
 
 /* 11. FOCUS OUTLINE */
 *:focus-visible {
-  outline: 2px solid #00E1F0 !important;
-  outline-offset: 2px !important;
+  outline: 2px solid #00D1FF !important;
+  outline-offset: 2px !important;
 }
 
 /* 12. PERMISSION ROW HOVER */
 label.PermissionRow__Container-sc-1h899cn-0.icxFlO:hover {
-  background: linear-gradient(90deg,#7C3AED22 0%,#00E1F022 100%) !important;
+  background: linear-gradient(90deg,#8A2BE222 0%,#00D1FF22 100%) !important;
 }
 
 /* 13. Terminal Scrollbar */
 div.xterm-viewport {
-  border-radius: 2px !important;
-  background-color: rgba(30,41,59,0.78) !important;
-  scrollbar-color: #7C3AED #1a1f29 !important;
-  scrollbar-width: thin !important;
+  border-radius: 2px !important;
+  background-color: rgba(30,41,59,0.78) !important;
+  scrollbar-color: #8A2BE2 #1a1f29 !important;
+  scrollbar-width: thin !important;
 }
 div.xterm-viewport::-webkit-scrollbar-thumb {
-  border-radius: 4px;
-  background: linear-gradient(135deg, #7C3AED 60%, #00E1F0 100%) !important;
+  border-radius: 4px;
+  background: linear-gradient(135deg, #8A2BE2 60%, #00D1FF 100%) !important;
 }
 div.xterm-viewport::-webkit-scrollbar-track {
-  background-color: #1a1f29;
+  background-color: #1a1f29;
 }
