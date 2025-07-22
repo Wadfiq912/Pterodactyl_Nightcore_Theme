@@ -6,11 +6,15 @@ fi
 repairPanel(){
     cd /var/www/pterodactyl
 
-    php artisan down
+    mv .env /root/
 
-    rm -r /var/www/pterodactyl/resources
+    cd /var/www && rm -rf pterodactyl
+
+    cd pterodactyl
 
     curl -L https://github.com/pterodactyl/panel/releases/download/v1.11.11/panel.tar.gz | tar -xzv
+
+    mv /root/.env /var/www/pterodactyl
 
     chmod -R 755 storage/* bootstrap/cache
 
